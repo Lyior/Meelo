@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client();
 
-bot.login('NDUyODY5MzEyMjQwMjg3Nzgy.DfWnVA.eXDm4OckCeV8OtSM2mAR2Ula8D0');
+bot.login(process.env.TOKEN);
 bot.on('message', message =>  {
 	if (message.content === '!ping') {
 		message.reply('pong !')
