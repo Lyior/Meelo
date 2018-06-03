@@ -1,7 +1,5 @@
 const Discord = require('discord.js')
-const bot = new Discord.Client();
 
-bot.login(process.env.TOKEN);
 bot.on('message', message =>  {
 	if (message.content === '!ping') {
 		message.reply('pong !')
@@ -66,3 +64,4 @@ bot.on('guildMemberAdd', function(member) {
 	member.guild.channels.find("name", "général").send('Bienvenue ' + member + ' sur le Discord du serveur ***avatar-state.net*** ! Es-tu prêt à maîtriser l\'un des quatre éléments ?');
 });
 
+bot.login(process.env.TOKEN);
