@@ -63,7 +63,7 @@ bot.on('ready', function () {
 })
 
 bot.on('guildMemberAdd', function(member) {
-	member.guild.channels.find("name", "dragon-jasmin").send('Bienvenue ' + member + ' sur le Discord du serveur ***avatar-state.net*** ! Es-tu prêt à maîtriser l\'un des quatre éléments ?');
+	member.guild.channels.find("name", "général").send('Bienvenue ' + member + ' sur le Discord du serveur ***avatar-state.net*** ! Es-tu prêt à maîtriser l\'un des quatre éléments ?');
 });
 
 bot.login(process.env.TOKEN);
