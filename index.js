@@ -90,7 +90,7 @@ bot.on('message', message => {
 					}],
 					timestamp: new Date(),
 					footer:
-						icon_url: clientDiscord.user.avatarURL
+						icon_url, clientDiscord.user.avatarURL
 						text: "Udemy"
                 }
             });
