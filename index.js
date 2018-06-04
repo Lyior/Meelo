@@ -68,7 +68,7 @@ bot.on('message', message => {
         else if (message.content === PREFIX + "embed"){
 				var embed = new Discord.RichEmbed()
 				.setColor("€40A497")
-				.setTitle("Titre")
+				.setTitle(message.guild.name, ["www.avatar-state.net"])
 				.setThumbnail(message.guild.iconURL)
 				.setDescription("Ceci est un test")
 				.addField("Zebi", "zbeub")
