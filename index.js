@@ -70,8 +70,8 @@ bot.on('message', message => {
                 embed: {
                     color: 3447003,
                     author: {
-						name: message.guild.name,
-						icon_url: message.guild.iconURL
+						name: bot.guild.name,
+						icon_url: bot.guild.iconURL
 					},
 					title: 'Titre',
 					url: 'https://google.com',
@@ -90,7 +90,7 @@ bot.on('message', message => {
 					}],
 					timestamp: new Date(),
 					footer: {
-						icon_url: message.guild.iconURL,
+						icon_url: bot.guild.iconURL,
 						text: "Udemy"
 					}
 				}
