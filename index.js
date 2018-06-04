@@ -88,7 +88,7 @@ bot.on('message', message => {
 						name: "zbeub",
 						value: "**zebi*"
 					}],
-					timestamp: new Date();
+					timestamp: new Date(),
 					footer:
 						icon_url: clientDiscord.user.avatarURL
 						text: "Udemy"
