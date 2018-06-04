@@ -34,7 +34,7 @@ bot.on('message', message => {
 			.addField("Nom du Discord", message.guild.name)
 			.addField("Créé le", message.guild.createdAt)
 			.addField("Tu as rejoins le", message.member.joinedAt)
-			.addField("Utilisateurs sur le Discord", message.guild.member.count)
+			.addField("Utilisateurs sur le Discord", message.guild.memberCount)
 			.setColor("0x0000FF")
 			message.channel.sendEmbed(embed)
 		}
@@ -71,7 +71,7 @@ bot.on('message', message => {
                     color: 3447003,
                     author: {
 						name: message.guild.name,
-						icon_url: guild.iconURL
+						icon_url: message.guild.iconURL
 					},
 					title: 'Titre',
 					url: 'https://google.com',
@@ -90,7 +90,7 @@ bot.on('message', message => {
 					}],
 					timestamp: new Date(),
 					footer: {
-						icon_url: guild.iconURL,
+						icon_url: message.guild.iconURL,
 						text: "Udemy"
 					}
 				}
