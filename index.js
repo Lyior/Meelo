@@ -70,7 +70,7 @@ bot.on('message', message => {
                 embed: {
                     color: 3447003,
                     author: {
-						name: bot..user.guild.name,
+						name: bot.user.guild.name,
 						icon_url: bot.user.guild.iconURL
 					},
 					title: 'Titre',
