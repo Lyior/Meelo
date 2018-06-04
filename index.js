@@ -1,4 +1,4 @@
-const Discord = require('discord.js'); 
+"const Discord = require('discord.js'); 
 const bot = new Discord.Client()
 
 const PREFIX = "/";
@@ -69,7 +69,7 @@ bot.on('message', message => {
 				var embed = new Discord.RichEmbed()
 				.setColor("€40A497")
 				.setTitle("Titre")
-				.setAuthor("Avatar State", ["https://imgur.com/a/gmZlvRd"], [www.avatar-state.net])
+				.setAuthor("Avatar State", ["https://imgur.com/a/gmZlvRd"], ["www.avatar-state.net"])
 				.setDescription("Ceci est un test")
 				.addField("Zebi", "zbeub")
 				.addField("suce", "bite")
