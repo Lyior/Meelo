@@ -63,8 +63,7 @@ bot.on('message', message => {
 
 		else if(splitMessage[0] === "/help") 
 				message.author.createDM().then(channel => {
-				channel.send('Les commandes disponibles sont :\n\n/
-					ping : pong\n\n/forum : avoir le lien du forum\n\n/air : guide sur la maîtrise de l\'air\n\n/terre : guide sur la maîtrise de la terre\n\n/feu : guide sur la maîtrise du feu\n\n/eau : guide sur la maîtrise de l\'eau\n\n/regles : connaître les règles du serveur minecraft\n\n/lands : savoir comment fonctionne le système de lands\n\n/help : tu viens d\'éxécuter cette commande...')
+				channel.send('Les commandes disponibles sont :\n\n/ping : pong\n\n/forum : avoir le lien du forum\n\n/air : guide sur la maîtrise de l\'air\n\n/terre : guide sur la maîtrise de la terre\n\n/feu : guide sur la maîtrise du feu\n\n/eau : guide sur la maîtrise de l\'eau\n\n/regles : connaître les règles du serveur minecraft\n\n/lands : savoir comment fonctionne le système de lands\n\n/help : tu viens d\'éxécuter cette commande...')
 			})
 		else if (message.content === PREFIX + "embed") {
 	var embed = new Discord.RichEmbed()
