@@ -17,7 +17,7 @@ bot.on('ready', function() {
 })
 
 bot.on('ready', function () {
-	bot.user.setGame('Avatar-State');
+	bot.user.setGame('Avatar State | /help');
 })
 
 bot.on('guildMemberAdd', function(member) {
