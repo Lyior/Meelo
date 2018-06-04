@@ -66,36 +66,16 @@ bot.on('message', message => {
 				channel.send('Les commandes disponibles sont :\n\n/ping : pong\n\n/forum : avoir le lien du forum\n\n/air : guide sur la maîtrise de l\'air\n\n/terre : guide sur la maîtrise de la terre\n\n/feu : guide sur la maîtrise du feu\n\n/eau : guide sur la maîtrise de l\'eau\n\n/regles : connaître les règles du serveur minecraft\n\n/lands : savoir comment fonctionne le système de lands\n\n/help : tu viens d\'éxécuter cette commande...')
 			})
         else if (message.content === PREFIX + "embed"){
-            message.channel.send({
-                embed: {
-                    color: 3447003,
-                    author: {
-						name: bot.user.guild.name,
-						icon_url: bot.user.guild.iconURL
-					},
-					title: 'Titre',
-					url: 'https://google.com',
-					description: "**Bonjour** le monde !",
-					field: [{
-						name: "DU TEXTE SIMPLE",
-						value: "votre description ici"
-					}],
-					field: [{
-						name: "big test",
-						value: "Donc [GOOGLE](https://google.com)"
-					}],
-					field: [{
-						name: "zbeub",
-						value: "**zebi*"
-					}],
-					timestamp: new Date(),
-					footer: {
-						icon_url: bot.user.guild.iconURL,
-						text: "Udemy"
-					}
-				}
-			})
-		}
+				var embed = new Discord.RichEmbed()
+				.setColor("€40A497")
+				.setTitle("Titre")
+				.setUrl("https//google.com")
+				.setDescription("Ceci est un test")
+				.addField("Zebi", "zbeub")
+				.addField("suce", "bite")
+				.setFooter("Menu de khla")
+				message.channel.sendMessage(embed);
+			}
 		else
 				sendError(message, "Erreur, problème dans les paramètres")
 		}
