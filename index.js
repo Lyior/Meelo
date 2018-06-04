@@ -79,11 +79,11 @@ bot.on('message', message => {
 					field: [{
 						name: "DU TEXTE SIMPLE",
 						value: "votre description ici"
-					},
+					}],
 					field: [{
 						name: "big test",
 						value: "Donc [GOOGLE](https://google.com)"
-					},
+					}],
 					field: [{
 						name: "zbeub",
 						value: "**zebi*"
