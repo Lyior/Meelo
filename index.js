@@ -69,7 +69,6 @@ bot.on('message', message => {
 				var embed = new Discord.RichEmbed()
 				.setColor("€40A497")
 				.setTitle("Titre")
-				.setUrl("https//google.com")
 				.setDescription("Ceci est un test")
 				.addField("Zebi", "zbeub")
 				.addField("suce", "bite")
