@@ -72,8 +72,8 @@ bot.on('message', message => {
 				.setThumbnail(message.guild.iconURL)
 				.setDescription("Ceci est un test")
 				.addField("Zebi", "zbeub")
-				.addField("suce", "bite")
-				.setFooter("Menu de khla")
+				.addField("beau", "gosse")
+				.setFooter("Lyio est beau")
 				message.channel.send(embed);
 			}
 		else
