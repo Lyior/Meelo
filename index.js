@@ -15,7 +15,7 @@ function sendError(message, description) {
 bot.on('ready', function() {
 	console.log("Je suis pret !");
 })
-//(node:4) DeprecationWarning: ClientUser#setGame: use ClientUser#setActivity instead
+
 bot.on('ready', function () {
 	bot.user.setGame('Avatar-State');
 })
@@ -50,6 +50,17 @@ bot.on('message', message => {
 			else
 				sendError(message, "Erreur, Vous devez d'abord rejoindre un canal vocal");
 		}
+		else if(splitMessage[0] === PREFIX + "infodiscord"){
+			var embed = new Discord.RichEmbed()
+			.setDescription("Information du Discord")
+			.addField("Nom du Discord", message.guild.name)
+			.addField("Créé le", message.guild.createdAt)
+			.addField("Tu as rejoins le", message.member.joinedAt)
+			.addField("Utilisateurs sur le Discord", message.guild.member.count)
+			.setColor("0x0000FF")
+			message.channel.sendEmbed(embed)
+		}
+
 		else if(splitMessage[0] === "/pause") {
 			if(dispatcher !== undefined)
 				dispatcher.pause();
