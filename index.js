@@ -15,7 +15,7 @@ function sendError(message, description) {
 bot.on('ready', function() {
 	console.log("Je suis pret !");
 })
-
+//(node:4) DeprecationWarning: ClientUser#setGame: use ClientUser#setActivity instead
 bot.on('ready', function () {
 	bot.user.setGame('Avatar-State');
 })
