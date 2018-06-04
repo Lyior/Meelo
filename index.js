@@ -71,7 +71,7 @@ bot.on('message', message => {
                     color: 3447003,
                     author: {
 						name: message.guild.name,
-						icon_url: clientDiscord.user.avatarURL
+						icon_url: message.member.avatarURL
 					},
 					title: 'Titre',
 					url: 'https://google.com',
