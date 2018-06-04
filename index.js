@@ -28,29 +28,7 @@ bot.on('guildMemberAdd', function(member) {
 bot.on('message', message => {
 	if(message.content[0] === PREFIX) {
 		let splitMessage = message.content.split(" ");
-		if(splitMessage[0] === '/play') {
-			if(splitMessage.length === 2) 
-			{
-				if(message.member.voiceChannel) 
-				{
-					message.member.voiceChannel.join().then(connextion => {
-						dispatcher = connection.playArbitraryInput(splitMessage[1]);
-
-						dispatcher.on('error', e => {
-							console.log(e)
-						});
-
-						dispatcher.on('end', e => {
-							console.log('Fin du son');
-						});
-					}).catch(console.log);
-				}
-
-			}
-			else
-				sendError(message, "Erreur, Vous devez d'abord rejoindre un canal vocal");
-		}
-		else if(splitMessage[0] === PREFIX + "infodiscord"){
+		if(splitMessage[0] === PREFIX + "infodiscord"){
 			var embed = new Discord.RichEmbed()
 			.setDescription("Information du Discord")
 			.addField("Nom du Discord", message.guild.name)
@@ -59,15 +37,6 @@ bot.on('message', message => {
 			.addField("Utilisateurs sur le Discord", message.guild.member.count)
 			.setColor("0x0000FF")
 			message.channel.sendEmbed(embed)
-		}
-
-		else if(splitMessage[0] === "/pause") {
-			if(dispatcher !== undefined)
-				dispatcher.pause();
-		}
-		else if(splitMessage[0] === "/resume") {
-			if(dispatcher !== undefined)
-				dispatcher.resume();
 		}
 		else if(splitMessage[0] === "/air")
 				message.reply('Tu veux connaître les sorts disponibles pour l\'air ou comment les utiliser ? Voilà pour toi :wink: https://www.avatar-state.net/forum/viewtopic.php?f=22&t=21');
@@ -96,6 +65,16 @@ bot.on('message', message => {
 				message.author.createDM().then(channel => {
 				channel.send('Les commandes disponibles sont :\n\n/ping : pong\n\n/forum : avoir le lien du forum\n\n/air : guide sur la maîtrise de l\'air\n\n/terre : guide sur la maîtrise de la terre\n\n/feu : guide sur la maîtrise du feu\n\n/eau : guide sur la maîtrise de l\'eau\n\n/regles : connaître les règles du serveur minecraft\n\n/lands : savoir comment fonctionne le système de lands\n\n/help : tu viens d\'éxécuter cette commande...')
 			})
+		else if (message.content === preifx + "embed") {
+	var embed = new Discord.RichEmbed()
+		.setTitle("EMBED")
+		.setDescription("Ceci est un embed")
+		.addField(".help", "Page d'aide", true)
+		.addField("Embed01", "Embed 01 ! :) This is a test")
+		.setColor("0xFF8000")
+		.setFooter("Bon moment parmis nous ! :) ")
+	message.channel.sendEmbed(embed);
+}
 			else
 				sendError(message, "Erreur, problème dans les paramètres")
 		}
