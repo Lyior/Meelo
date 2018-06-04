@@ -20,6 +20,10 @@ bot.on('ready', function () {
 	bot.user.setGame('Avatar-State');
 })
 
+bot.on('guildMemberAdd', function(member) {
+	member.guild.channels.find("name", "discussion").send('Bienvenue ' + member + ' sur le Discord du serveur ***avatar-state.net*** ! Es-tu prêt à maîtriser l\'un des quatre éléments ?');
+});
+
 
 bot.on('message', message => {
 	if(message.content[0] === PREFIX) {
