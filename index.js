@@ -75,15 +75,15 @@ bot.on('message', message => {
 					},
 					title: 'Titre',
 					url: 'https://google.com',
-					description: "**Bonjour** le monde !"
+					description: "**Bonjour** le monde !",
 					field: [{
 						name: "DU TEXTE SIMPLE",
 						value: "votre description ici"
-					}
+					},
 					field: [{
 						name: "big test",
 						value: "Donc [GOOGLE](https://google.com)"
-					}
+					},
 					field: [{
 						name: "zbeub",
 						value: "**zebi*"
