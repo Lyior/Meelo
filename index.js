@@ -72,7 +72,7 @@ bot.on('message', message => {
                     author: {
 						name: clientDiscord.user.username,
 						icon_url: clientDiscord.user.avatarURL
-					}
+					},
 					title: 'Titre',
 					url: 'https://google.com',
 					description: "**Bonjour** le monde !"
