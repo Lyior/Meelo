@@ -21,7 +21,7 @@ bot.on('ready', function () {
 })
 
 bot.on('guildMemberAdd', function(member) {
-	member.guild.channels.find("name", "discussion").send('Bienvenue ' + member + ' sur le Discord du serveur ***avatar-state.net*** ! Es-tu prêt à maîtriser l\'un des quatre éléments ?');
+	member.guild.channels.find("name", "discussion").send('Bienvenue ' + member + ' sur le Discord d\'***avatar-state.net*** ! Es-tu prêt à maîtriser l\'un des quatre éléments ?');
 });
 
 
@@ -65,17 +65,36 @@ bot.on('message', message => {
 				message.author.createDM().then(channel => {
 				channel.send('Les commandes disponibles sont :\n\n/ping : pong\n\n/forum : avoir le lien du forum\n\n/air : guide sur la maîtrise de l\'air\n\n/terre : guide sur la maîtrise de la terre\n\n/feu : guide sur la maîtrise du feu\n\n/eau : guide sur la maîtrise de l\'eau\n\n/regles : connaître les règles du serveur minecraft\n\n/lands : savoir comment fonctionne le système de lands\n\n/help : tu viens d\'éxécuter cette commande...')
 			})
-		else if (message.content === PREFIX + "embed") {
-	var embed = new Discord.RichEmbed()
-		.setTitle("EMBED")
-		.setDescription("Ceci est un embed")
-		.addField(".help", "Page d'aide", true)
-		.addField("Embed01", "Embed 01 ! :) This is a test")
-		.setColor("0xFF8000")
-		.setFooter("Bon moment parmis nous ! :) ")
-	message.channel.sendEmbed(embed);
-}
-			else
+        else if (message.content === PREFIX + "embed") {
+            message.channel.send({
+                embed: {
+                    color: 3447003,
+                    author: {
+						name: clientDiscord.user.username,
+						icon_url: clientDiscord.user.avatarURL
+					}
+					title: 'Titre',
+					url: 'https://google.com',
+					description: "**Bonjour** le monde !"
+					field: [{
+						name: "DU TEXTE SIMPLE",
+						value: "votre description ici"
+					}
+					field: [{
+						name: "big test",
+						value: "Donc [GOOGLE](https://google.com)"
+					}
+					field: [{
+						name: "zbeub",
+						value: "**zebi*"
+					}],
+					timestamp: new Date();
+					footer:
+						icon_url: clientDiscord.user.avatarURL
+						text: "Udemy"
+                }
+            });
+		else
 				sendError(message, "Erreur, problème dans les paramètres")
 		}
 	})
