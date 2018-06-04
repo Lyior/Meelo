@@ -17,7 +17,7 @@ bot.on('ready', function() {
 })
 
 bot.on('ready', function () {
-	bot.user.setGame('Avatar State | /help');
+	bot.user.setActivity('Avatar State  |  /help');
 })
 
 bot.on('guildMemberAdd', function(member) {
@@ -74,7 +74,7 @@ bot.on('message', message => {
 				.addField("Zebi", "zbeub")
 				.addField("suce", "bite")
 				.setFooter("Menu de khla")
-				message.channel.sendMessage(embed);
+				message.channel.send(embed);
 			}
 		else
 				sendError(message, "Erreur, problème dans les paramètres")
