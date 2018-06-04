@@ -71,7 +71,7 @@ bot.on('message', message => {
                     color: 3447003,
                     author: {
 						name: message.guild.name,
-						icon_url: bot.user.avatarURL
+						icon_url: guild.iconURL
 					},
 					title: 'Titre',
 					url: 'https://google.com',
@@ -90,7 +90,7 @@ bot.on('message', message => {
 					}],
 					timestamp: new Date(),
 					footer: {
-						icon_url: bot.user.avatarURL,
+						icon_url: guild.iconURL,
 						text: "Udemy"
 					}
 				}
