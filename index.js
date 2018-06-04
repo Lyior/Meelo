@@ -94,9 +94,9 @@ bot.on('message', message => {
 						text: "Udemy"
 					}
                 }
-            });
+            })
 		else
 				sendError(message, "Erreur, problème dans les paramètres")
 		}
-	})
+	});
 bot.login(process.env.TOKEN);
