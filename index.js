@@ -70,8 +70,8 @@ bot.on('message', message => {
                 embed: {
                     color: 3447003,
                     author: {
-						name: 'Avatar State',
-						icon_url: 'https://imgur.com/a/gmZlvRd'
+						name: bot.guild.name,
+						icon_url: bot.user.guild.iconURL
 					},
 					title: 'Titre',
 					url: 'https://google.com',
@@ -90,7 +90,7 @@ bot.on('message', message => {
 					}],
 					timestamp: new Date(),
 					footer: {
-						icon_url: 'https://imgur.com/a/gmZlvRd',
+						icon_url: bot.user.guild.iconURL,
 						text: "Udemy"
 					}
 				}
